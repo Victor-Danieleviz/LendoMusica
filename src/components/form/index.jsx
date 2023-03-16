@@ -23,26 +23,19 @@ export default function Form() {
     async function obterLetra() {
         try {
             const resposta = await fetch(url);
-            const dados = await resposta.json();
-            console.log(dados)
-            console.log(dados.art.name)
-            console.log(dados.mus[0].name)
-            console.log(dados.mus[0].text)
-            testeStorage(dados)
+            const data = await resposta.json();
+            addSearchToStorage(data)
         } catch (erro) {
             console.log('Música não encontrada =(')
             navigate("/errorSearch"); 
         }
     }
 
-    const testeStorage = (dados) => {
+    const addSearchToStorage = (data) => {
         try {
-            let chave = (dados.art.name +'-'+ dados.mus[0].name).replaceAll(' ','')
-            let conteudo = JSON.stringify(dados)
-    
-            localStorage.setItem(chave,conteudo)
-            console.log("criou o localStorage")
-            navigate(`/searchResult?artMus=${chave}`); 
+            console.log(data)
+            localStorage.setItem('currentSearch', JSON.stringify([data]))
+            navigate("/searchResult")
         } catch{
             console.log('Erro no localStorage')
         }
