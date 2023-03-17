@@ -15,7 +15,8 @@ export default function Music() {
         navigate("/")
     }
     
-    const musicData = JSON.parse(localStorage.getItem("currentSearch"))
+    const lyric = JSON.parse(localStorage.getItem("selectedLyric"))[0]
+    console.log(lyric)
 
     return(
         
@@ -28,8 +29,8 @@ export default function Music() {
                 </Link>
             </header>
             <main>
-                <h1>{musicData[0].mus[0].name}</h1>
-                <p style={{whiteSpace: 'pre-wrap'}}>{musicData[0].mus[0].text}</p>
+                <h1>{lyric.title}</h1>
+                <p style={{whiteSpace: 'pre-wrap'}}>{lyric.text}</p>
                 <h2>Curtiu? Busque mais letras.</h2>
                 <Button lupa="branca" mensagem="Nova Busca" onClick={redirect}/>
             </main>
