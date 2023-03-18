@@ -2,6 +2,7 @@ import logo from "../../assets/Logo_laranja.svg"
 import Button from "../../components/button"
 
 import { useNavigate } from "react-router-dom"
+import ErrorSearch from "../ErrorSearch"
 
 export default function SearchResult() {
 
@@ -24,12 +25,12 @@ export default function SearchResult() {
             text: musicData.mus[index].text
         }
         //localstorage que contém apenas a letra que foi selecionada pelo usuário (para evitar problemas de seleção da letra correta caso a api retorne mais de uma letra).
-        localStorage.setItem("selectedLyric", JSON.stringify([searchedMusic])) 
+        localStorage.setItem("selectedLyric", JSON.stringify([searchedMusic]))
         if (!localStorage.getItem("musicHistory")) {
             localStorage.setItem("musicHistory", JSON.stringify([searchedMusic]))
             return musicPage()
-        } 
-        
+        }
+
         const history = JSON.parse(localStorage.getItem('musicHistory'))
 
         if (history.length > 9) {
@@ -38,13 +39,15 @@ export default function SearchResult() {
 
         history.push(searchedMusic)
         localStorage.setItem("musicHistory", JSON.stringify(history))
-        return musicPage()        
+        return musicPage()
     }
 
     return (
         <div>
             <header>
-                <img src={logo} alt="Lendo Música" />
+                <a href="/">
+                    <img className="logo" src={logo} alt="Lendo Música" />
+                </a>
             </header>
             <main>
                 <h1>Letra Encontrada</h1>

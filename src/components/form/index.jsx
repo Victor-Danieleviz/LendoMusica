@@ -24,7 +24,7 @@ export default function Form() {
         try {
             const resposta = await fetch(url);
             const data = await resposta.json();
-            addSearchToStorage(data)
+            data.type == "notfound" ? navigate("/errorSearch") : addSearchToStorage(data)
         } catch (erro) {
             console.log('Música não encontrada =(')
             navigate("/errorSearch"); 
@@ -36,8 +36,8 @@ export default function Form() {
             console.log(data)
             localStorage.setItem('currentSearch', JSON.stringify([data]))
             navigate("/searchResult")
-        } catch{
-            console.log('Erro no localStorage')
+        } catch(error){
+            console.log(error)
         }
     }
 

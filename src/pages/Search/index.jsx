@@ -8,7 +8,9 @@ export default function Search() {
     return (
         <div>
             <header>
-                <img className="logo" src={logo} alt="Lendo Música" />
+                <a href="/">
+                    <img className="logo" src={logo} alt="Lendo Música" />
+                </a>
                 <Link className="ultimasBuscas" to="/history">Últimas buscas</Link>
             </header>
 

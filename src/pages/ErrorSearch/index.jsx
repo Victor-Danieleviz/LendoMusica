@@ -16,10 +16,12 @@ export default function ErrorSearch() {
         navigate("/")
     }
 
-    return(
+    return (
         <div>
             <header>
-                <img src={logo} alt="Lendo Música" />
+                <a href="/">
+                    <img className="logo" src={logo} alt="Lendo Música" />
+                </a>
             </header>
 
             <main>
@@ -29,7 +31,7 @@ export default function ErrorSearch() {
                     <p>
                         Essa música ainda não foi escrita, mas não fique triste, você pode acessar milhares de músicas realizando uma nova busca {"<3"}
                     </p>
-                    <Button mensagem="Nova Busca" onClick={redirect}/>
+                    <Button mensagem="Nova Busca" onClick={redirect} />
                 </section>
             </main>
 
