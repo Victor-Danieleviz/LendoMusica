@@ -15,7 +15,7 @@ export default function History() {
     }, [historico]);
 
     const limparHistorico = () => {
-        localStorage.clear()
+        localStorage.removeItem("musicHistory");
         setHistorico(!historico)
     }
 

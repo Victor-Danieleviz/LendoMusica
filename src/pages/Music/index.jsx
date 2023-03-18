@@ -14,16 +14,9 @@ export default function Music() {
     const redirect = () => {
         navigate("/")
     }
-
-    const chave = new URLSearchParams(window.location.search).get('artMus')
     
-    const dadosMusica = JSON.parse(localStorage.getItem(chave))
-
-    if (dadosMusica == null) {
-        return <ErrorSearch />
-    }
-
-    console.log(dadosMusica.mus[0])
+    const lyric = JSON.parse(localStorage.getItem("selectedLyric"))[0]
+    console.log(lyric)
 
     return(
         
@@ -36,8 +29,8 @@ export default function Music() {
                 </Link>
             </header>
             <main>
-                <h1>{dadosMusica.mus[0].name}</h1>
-                <p style={{whiteSpace: 'pre-wrap'}}>{dadosMusica.mus[0].text}</p>
+                <h1>{lyric.title}</h1>
+                <p style={{whiteSpace: 'pre-wrap'}}>{lyric.text}</p>
                 <h2>Curtiu? Busque mais letras.</h2>
                 <Button lupa="branca" mensagem="Nova Busca" onClick={redirect}/>
             </main>
