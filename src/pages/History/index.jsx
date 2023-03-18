@@ -26,7 +26,9 @@ export default function History() {
     return (
         <div>
             <header>
-                <img className="logo" src={logo} alt="Lendo Música" />
+                <a href="/">
+                    <img className="logo" src={logo} alt="Lendo Música" />
+                </a>
                 <Button className="limparHistorico" img="none" mensagem="Limpar Histórico" onClick={limparHistorico} />
             </header>
             <main>
