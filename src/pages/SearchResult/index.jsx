@@ -2,7 +2,9 @@ import logo from "../../assets/Logo_laranja.svg"
 import Button from "../../components/button"
 
 import { useNavigate } from "react-router-dom"
-import ErrorSearch from "../ErrorSearch"
+import BlueButtonStyled from "../../styles/components/blueButton-style"
+
+import SearchResultStyled from "../../styles/pages/searchResultPage-style"
 
 export default function SearchResult() {
 
@@ -43,7 +45,7 @@ export default function SearchResult() {
     }
 
     return (
-        <div>
+        <SearchResultStyled>
             <header>
                 <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
@@ -52,14 +54,14 @@ export default function SearchResult() {
             <main>
                 <h1>Letra Encontrada</h1>
                 <section>
-                    {/*map é utilizado pois se acontecer da api retornar mais de uma letra para uma mesma música, todas as variações são mostradas.*/}
+                    {/*map é utilizado pois se acontecer da api retornar mais de uma letra para uma mesma música, todas as variações de letra são mostradas.*/}
                     {musicData[0].mus.map((music, index) => {
                         if (musicData[0].type == "aprox" || musicData[0].type == "exact") {
                             return (
-                                <button onClick={() => addToLocalStorageHistory(musicData[0], index)} key={(musicData[0].art.name + '-' + music.name).replaceAll(' ', '')}>
-                                    <span>{musicData[0].art.name}</span> <br />
+                                <BlueButtonStyled onClick={() => addToLocalStorageHistory(musicData[0], index)} key={(musicData[0].art.name + '-' + music.name).replaceAll(' ', '')}>
+                                    <span className="title">{musicData[0].art.name}</span>
                                     <span>{music.name}</span>
-                                </button>
+                                </BlueButtonStyled>
                             )
                         } else {
                             navigate("/errorSearch")
@@ -69,6 +71,6 @@ export default function SearchResult() {
                     <Button mensagem="Nova Busca" onClick={redirect} />
                 </section>
             </main>
-        </div>
+        </SearchResultStyled>
     )
 }

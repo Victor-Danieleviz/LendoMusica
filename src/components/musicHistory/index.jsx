@@ -2,6 +2,8 @@ import Button from "../button";
 
 import { useNavigate } from "react-router-dom";
 
+import MusicHistoryStyled from "../../styles/components/musicHistory-style";
+
 export default function MusicHistory() {
 
     const navigate = useNavigate()
@@ -16,17 +18,18 @@ export default function MusicHistory() {
     }
 
     return (
-        <div>
+        <MusicHistoryStyled>
             {allMusic != null ? allMusic.reverse().map((music, index) => {
                 return (
                     <Button
                         key={index}
                         img="none"
+                        className="test"
                         mensagem={`${music.artist} - ${music.title}`}
                         onClick={() => musicPage(index)}
                     />
                 )
-            }) : <h2>Histórico Vazio.</h2>}
-        </div>
+            }) : <h2>Histórico Vazio</h2>}
+        </MusicHistoryStyled>
     )
 }

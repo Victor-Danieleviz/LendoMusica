@@ -2,7 +2,7 @@ import logo from "../../assets/Logo_azul.svg"
 import seta from "../../assets/Seta.svg"
 import Button from "../../components/button"
 
-import ErrorSearch from "../ErrorSearch"
+import MusicPageStyled from "../../styles/pages/musicPage-style"
 
 import { useNavigate, Link } from "react-router-dom"
 
@@ -20,7 +20,7 @@ export default function Music() {
 
     return (
 
-        <div>
+        <MusicPageStyled>
             <header>
                 <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
@@ -31,11 +31,13 @@ export default function Music() {
                 </Link>
             </header>
             <main>
-                <h1>{lyric.title}</h1>
-                <p style={{ whiteSpace: 'pre-wrap' }}>{lyric.text}</p>
+                <section>
+                    <h1>{lyric.title}</h1>
+                    <p style={{ whiteSpace: 'pre-wrap' }}>{lyric.text}</p>
+                </section>
                 <h2>Curtiu? Busque mais letras.</h2>
                 <Button lupa="branca" mensagem="Nova Busca" onClick={redirect} />
             </main>
-        </div>
+        </MusicPageStyled>
     )
 }

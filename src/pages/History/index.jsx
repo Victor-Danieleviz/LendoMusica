@@ -5,6 +5,8 @@ import MusicHistory from "../../components/musicHistory"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
+import HistoryPageStyled from "../../styles/historyPage-style"
+
 export default function History() {
 
     const navigate = useNavigate()
@@ -24,7 +26,7 @@ export default function History() {
     }
 
     return (
-        <div>
+        <HistoryPageStyled>
             <header>
                 <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
@@ -34,10 +36,10 @@ export default function History() {
             <main>
                 <h1>Histórico</h1>
                 <section>
-                    <MusicHistory />
-                    <Button mensagem="buscar" onClick={redirect} />
+                    <MusicHistory/>
+                    <Button mensagem="Buscar" onClick={redirect} />
                 </section>
             </main>
-        </div>
+        </HistoryPageStyled>
     )
 }

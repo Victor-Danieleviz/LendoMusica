@@ -1,14 +1,15 @@
 import React from 'react';
 import lupa from "./img/Lupa.svg"
 import lupa_branco from "./img/Lupa_branco.svg"
+import ButtonStyled from '../../styles/button-style.js';
 
 export default function Button(props) {
     return (
         <div>
-            <button className={props.className} onClick={props.onClick} type={props.type}>
+            <ButtonStyled className={props.className} onClick={props.onClick} type={props.type}>
                 {props.img != "none" ? <img src={props.lupa == "branca" ? lupa_branco : lupa } /> : ""}
                 {props.mensagem}
-            </button>
+            </ButtonStyled>
         </div>
     )
 }

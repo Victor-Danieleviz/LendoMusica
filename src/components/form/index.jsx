@@ -2,6 +2,7 @@ import Button from "../button";
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
+import FormStyled from "../../styles/form-style";
 
 export default function Form() {
     
@@ -43,7 +44,7 @@ export default function Form() {
 
     return (
         <div>
-            <form>
+            <FormStyled>
                 <section className="inputForm">
                     <label htmlFor="inputArtista">Artista</label>
                     <input 
@@ -64,7 +65,7 @@ export default function Form() {
                         onChange={(e)=>setNomeMusica(e.target.value)}/>
                 </section>
                 <Button mensagem="Busca" type="submit" onClick={buscar}/>
-            </form>
+            </FormStyled>
         </div>
     )
 }

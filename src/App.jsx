@@ -7,18 +7,22 @@ import Search from './pages/Search'
 import History from './pages/History'
 import Music from './pages/Music'
 import SearchResult from './pages/SearchResult'
+import GlobalStyle from './globalStyle'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Search/>} />
-        <Route path='/errorSearch' element={<ErrorSearch/>} />
-        <Route path='/history' element={<History/>} />
-        <Route path='/musicPage' element={<Music/>} />
-        <Route path='/searchResult' element={<SearchResult/>} />
-      </Routes>
-    </Router>
+    <div>
+      <GlobalStyle />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Search/>} />
+          <Route path='/errorSearch' element={<ErrorSearch/>} />
+          <Route path='/history' element={<History/>} />
+          <Route path='/musicPage' element={<Music/>} />
+          <Route path='/searchResult' element={<SearchResult/>} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 

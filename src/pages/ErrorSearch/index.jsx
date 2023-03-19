@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 import Button from "../../components/button"
 
-
+import ErrorSearchStyled from "../../styles/errorSearchPage-style"
 
 export default function ErrorSearch() {
 
@@ -17,7 +17,7 @@ export default function ErrorSearch() {
     }
 
     return (
-        <div>
+        <ErrorSearchStyled>
             <header>
                 <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
@@ -36,6 +36,6 @@ export default function ErrorSearch() {
             </main>
 
 
-        </div>
+        </ErrorSearchStyled>
     )
 }
