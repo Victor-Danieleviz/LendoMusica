@@ -2,7 +2,7 @@ import logo from "../../assets/Logo_azul.svg"
 import seta from "../../assets/Seta.svg"
 import Button from "../../components/button"
 
-import MusicPageStyled from "../../styles/pages/musicPage-style"
+import MusicPageStyled from "../../styles/pages/musicPage-style.js"
 
 import { useNavigate, Link } from "react-router-dom"
 

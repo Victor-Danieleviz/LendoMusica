@@ -1,7 +1,7 @@
 import React from 'react';
 import lupa from "./img/Lupa.svg"
 import lupa_branco from "./img/Lupa_branco.svg"
-import ButtonStyled from '../../styles/button-style.js';
+import ButtonStyled from '../../styles/components/button-style.js';
 
 export default function Button(props) {
     return (

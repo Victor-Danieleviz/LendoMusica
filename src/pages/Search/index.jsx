@@ -3,7 +3,7 @@ import logo from "../../assets/Logo_laranja.svg"
 
 import { Link } from "react-router-dom";
 
-import SearhPageStyle from "../../styles/searchPage-style";
+import SearhPageStyle from "../../styles/pages/searchPage-style";
 
 
 export default function Search() {

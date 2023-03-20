@@ -1,8 +1,7 @@
-import Button from "../button";
 import { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
-import FormStyled from "../../styles/form-style";
+import Button from "../button";
+import FormStyled from "../../styles/components/form-style.js"
 
 export default function Form() {
 

@@ -1,12 +1,8 @@
-import { Link, redirect } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from "../../assets/Logo_laranja.svg"
 import meninaSofa from "../../assets/Menina_no_sofa.svg"
-
-import { useNavigate } from "react-router-dom"
-
 import Button from "../../components/button"
-
-import ErrorSearchStyled from "../../styles/errorSearchPage-style"
+import ErrorSearchStyled from "../../styles/pages/errorSearchPage-style"
 
 export default function ErrorSearch() {
 

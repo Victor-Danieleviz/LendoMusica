@@ -1,7 +1,4 @@
-import { useState } from 'react'
-
 import {Routes, BrowserRouter as Router, Route} from 'react-router-dom'
-
 import ErrorSearch from './pages/ErrorSearch'
 import Search from './pages/Search'
 import History from './pages/History'

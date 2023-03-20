@@ -1,7 +1,5 @@
-import Button from "../button";
-
 import { useNavigate } from "react-router-dom";
-
+import Button from "../button";
 import MusicHistoryStyled from "../../styles/components/musicHistory-style";
 
 export default function MusicHistory() {
