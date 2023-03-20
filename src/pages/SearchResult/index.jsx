@@ -1,7 +1,7 @@
 import logo from "../../assets/Logo_laranja.svg"
 import Button from "../../components/button"
 
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import BlueButtonStyled from "../../styles/components/blueButton-style"
 
 import SearchResultStyled from "../../styles/pages/searchResultPage-style"
@@ -47,9 +47,9 @@ export default function SearchResult() {
     return (
         <SearchResultStyled>
             <header>
-                <a href="/">
+                <Link to="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
-                </a>
+                </Link>
             </header>
             <main>
                 <h1>Letra Encontrada</h1>
