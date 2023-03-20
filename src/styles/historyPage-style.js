@@ -45,6 +45,7 @@ const HistoryPageStyled = styled.div`
 
         button {
             max-width: 80%;
+            margin-left: 10%;
         }
     }
 `

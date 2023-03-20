@@ -7,6 +7,7 @@ const FormStyled = styled.form`
     justify-content: center;
     flex-direction: column;
     gap: 34px;
+    
     width: 40%; 
 
     section{

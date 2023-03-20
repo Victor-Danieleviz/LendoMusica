@@ -22,9 +22,9 @@ export default function Music() {
 
         <MusicPageStyled>
             <header>
-                <a href="/">
+                <Link to="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
-                </a>
+                </Link>
                 <Link to="/">
                     <img src={seta} />
                     Voltar para a busca

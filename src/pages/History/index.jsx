@@ -3,7 +3,7 @@ import Button from "../../components/button"
 import MusicHistory from "../../components/musicHistory"
 
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import HistoryPageStyled from "../../styles/historyPage-style"
 
@@ -28,9 +28,9 @@ export default function History() {
     return (
         <HistoryPageStyled>
             <header>
-                <a href="/">
+                <Link to="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
-                </a>
+                </Link>
                 <Button className="limparHistorico" img="none" mensagem="Limpar Histórico" onClick={limparHistorico} />
             </header>
             <main>

@@ -5,8 +5,14 @@ const MusicPageStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    width: 100%;
 
     background-color: #FFFFFF;
+    background-repeat: repeat;
+
+    
+    overflow: hidden;
 
     * {
         margin: 0;
@@ -118,7 +124,7 @@ const MusicPageStyled = styled.div`
 
         p {
             font-size: 18px;
-            
+            max-width: 280px;
         }
 
     }
@@ -128,8 +134,14 @@ const MusicPageStyled = styled.div`
             width: 240px;
         }
 
-        p {
-            max-width: 228px;
+        p{
+            font-size: 16px;
+            max-width: 160px;
+        }
+
+        button {
+            width: 80%;
+            margin-left: 10%;
         }
 
     }
