@@ -9,13 +9,6 @@ const SearhPageStyle = styled.div`
         gap: 105px;
     }
 
-    header a{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 33px;
-        text-align: center;
-    }
-
     @media (max-width: 600px) {
         header {
             flex-direction: column;
@@ -36,7 +29,6 @@ const SearhPageStyle = styled.div`
 
         button {
             max-width: 80%;
-            margin-left: 10%;
         }
     }
 `

@@ -20,8 +20,6 @@ const BlueButtonStyled = styled.button`
     color: #FFFFFF;
     line-height: 22px;
 
-    cursor: pointer;
-
     span {
         margin-left: 32px;
         color: #FFFFFF;
@@ -32,14 +30,13 @@ const BlueButtonStyled = styled.button`
     }
 
     @media (max-width: 600px) {
-        height: 80px;
+        height: 100px;
         width: 80%;
-        margin-bottom: 48px;
     }
 
     @media (max-width: 320px) {
         min-width: 10%;
-        font-size: 14px;
+        font-size: 12px;
     }
 `
 

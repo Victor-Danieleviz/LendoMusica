@@ -10,9 +10,9 @@ export default function Search() {
     return (
         <SearhPageStyle>
             <header>
-                <Link to="/">
+                <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
-                </Link>
+                </a>
                 <Link className="ultimasBuscas" to="/history">Últimas buscas</Link>
             </header>
 

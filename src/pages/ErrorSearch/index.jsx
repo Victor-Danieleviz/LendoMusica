@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom"
+import { redirect } from "react-router-dom"
 import logo from "../../assets/Logo_laranja.svg"
 import meninaSofa from "../../assets/Menina_no_sofa.svg"
 
@@ -19,9 +19,9 @@ export default function ErrorSearch() {
     return (
         <ErrorSearchStyled>
             <header>
-                <Link to="/">
+                <a href="/">
                     <img className="logo" src={logo} alt="Lendo Música" />
-                </Link>
+                </a>
             </header>
 
             <main>
